@@ -1,3 +1,239 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --color-primary: #1d4ed8;
+  --color-secondary: #2563eb;
+  --color-bg: #f2faff;
+  --color-on-surface: #001926;
+  --color-on-surface-sec: #1e3744;
+
+  --heading-font: 'Roboto Slab', serif;
+  --heading-font-weight: 700;
+  --heading-color: var(--color-on-surface);
+  --heading-line-height: 1.2;
+
+  @apply text-[16px] font-normal leading-relaxed text-[var(--color-on-surface)];
+  font-family: 'Montserrat', sans-serif;
+}
+
+body.dark {
+  --colo-primary: #122235;
+  --color-bg: #001926;
+  --color-on-surface: #f2faff;
+  --color-on-surface-sec: #dee6ff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.display-1,
+.display-2,
+.display-3,
+.display-4,
+.display-5,
+.display-6 {
+  font-family: var(--heading-font);
+  font-weight: var(--heading-font-weight);
+  line-height: var(--heading-line-height);
+  color: var(--heading-color);
+}
+
+#one-page-menu .item-list {
+  @apply relative border-b border-gray-200;
+}
+
+#one-page-menu .nav-link {
+  @apply text-lg font-[400] not-italic leading-[2.5];
+  color: var(--color-on-surface);
+}
+
+#one-page-menu .nav-link::before {
+  position: absolute;
+  bottom: -1px;
+  width: 0;
+  height: 1px;
+  content: '';
+  background: var(--color-on-surface);
+  transition: width 0.6s ease-out;
+}
+
+#one-page-menu .nav-link.active::before,
+#one-page-menu .nav-link:hover::before {
+  width: 100%;
+}
+
+header {
+  @apply fixed top-0 left-0 h-full px-12 bg-[var(--color-bg)];
+}
+
+.container-box {
+  @apply flex flex-col mx-1 px-1 lg:mx-5 lg:px-5;
+}
+
+.content-box {
+  @apply flex p-2 space-x-12;
+}
+
+.hero .banner-box .banner-content {
+  @apply flex flex-col justify-end my-1 pt-1 lg:my-5 lg:pt-5;
+}
+
+.hero .banner-box .banner-content .banner-tag>span {
+  @apply pb-2 uppercase border-b border-[var(--color-on-surface)];
+}
+
+.hero .banner-box .banner-content .banner-title {
+  @apply text-5xl lg:text-8xl font-["Montserrat"] font-extrabold leading-none;
+}
+
+.about-box {
+  @apply lg:w-1/2 pb-5 space-y-9;
+}
+
+.heading-section {
+  @apply flex justify-center;
+}
+
+.heading-section .heading-box {
+  @apply flex flex-col mb-9 space-y-2;
+}
+
+.heading-section .heading-box>span {
+  @apply font-light;
+}
+
+.heading-section .heading-box>h1 {
+  @apply text-7xl;
+}
+
+.menu-btn {
+  @apply hidden fixed top-5 right-5 w-6 h-6 m-5 cursor-pointer z-[49];
+}
+
+.menu-btn>span,
+.menu-btn>span::before,
+.menu-btn>span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-on-surface);
+  transition-duration: .25s;
+}
+
+.menu-btn>span::before {
+  top: -8px;
+  content: '';
+}
+
+.menu-btn>span::after {
+  top: 8px;
+  content: '';
+}
+
+.nav-active .menu-btn>span {
+  transform: rotate(45deg);
+}
+
+.nav-active .menu-btn>span::before {
+  top: 0;
+  background: var(--color-on-surface);
+  transform: rotate(0);
+}
+
+.nav-active .menu-btn>span::after {
+  top: 0;
+  background: var(--color-on-surface);
+  transform: rotate(90deg);
+}
+
+@media (max-width: 1024px) {
+  header {
+    @apply z-[48];
+    transform: translate3d(-100%, 0, 0);
+    transition: transform 0.3s ease-out;
+  }
+
+  .nav-active header {
+    transform: translate3d(0, 0, 0);
+  }
+
+  .menu-btn {
+    @apply block
+  }
+}
+
+.info-box {
+  @apply flex flex-col gap-1 text-justify;
+  color: var(--color-on-surface);
+}
+
+.info-box>span {
+  @apply font-light;
+}
+
+.info-box>h3 {
+  @apply text-2xl text-left;
+}
+
+.info-btn .btn {
+  @apply py-4 px-10 bg-[var(--color-on-surface)] hover:bg-[var(--color-on-surface-sec)] text-sm text-white uppercase rounded-md shadow-md transition duration-300;
+}
+
+.skill-chart li {
+  @apply w-full mb-9 font-[500];
+}
+
+.skill-chart li .chart-border {
+  @apply relative border-2 border-solid border-[var(--color-on-surface-sec)];
+}
+
+.skill-chart li .chart-percentage {
+  @apply border-b-8 border-solid border-[var(--color-secondary)];
+  content: '';
+}
+
+.skill-chart li .chart-percentage.seventy-percent {
+  width: 65%; 
+}
+
+.skill-chart li .chart-percentage.seventy-percent {
+  width: 70%; 
+}
+
+.skill-chart li .chart-percentage.seventy-five-percent {
+  width: 75%; 
+}
+
+.skill-chart li .chart-percentage.eighty-percent {
+  width: 80%; 
+}
+
+.skill-chart li .chart-percentage.ninety-percent {
+  width: 90%; 
+}
+
+.skill-chart li .chart-percentage.ninety-five-percent {
+  width: 95%; 
+}
+
+.portfolio-box {
+  @apply flex flex-col justify-start w-1/4 mb-1 p-5 space-y-2 ;
+}
+
+.portfolio-image {
+  @apply w-full aspect-square
+}
+
+.portfolio-image img {
+  @apply w-full h-full object-contain bg-[var(--color-bg)] shadow-md transition duration-200 hover:shadow-sm
+}
+
+footer {
+  @apply border-t border-[var(--color-on-surface)]
+}
