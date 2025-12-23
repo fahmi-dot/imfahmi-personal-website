@@ -71,6 +71,10 @@ header {
   @apply fixed top-0 left-0 h-full px-12 bg-[var(--color-bg)];
 }
 
+section {
+  @apply my-5 py-5 border-t border-[var(--color-on-surface-sec)];
+}
+
 .container-box {
   @apply flex flex-col mx-1 px-1 lg:mx-5 lg:px-5;
 }
@@ -79,16 +83,20 @@ header {
   @apply flex p-2 space-x-12;
 }
 
+.hero .banner-box {
+  @apply flex items-center h-[100vh];
+}
+
 .hero .banner-box .banner-content {
   @apply flex flex-col justify-end my-1 pt-1 lg:my-5 lg:pt-5;
 }
 
-.hero .banner-box .banner-content .banner-tag>span {
-  @apply pb-2 uppercase border-b border-[var(--color-on-surface)];
+.hero .banner-box .banner-content .banner-tag span {
+  @apply pb-2 uppercase border-b border-[var(--color-on-surface)] tracking-widest;
 }
 
 .hero .banner-box .banner-content .banner-title {
-  @apply text-5xl lg:text-8xl font-["Montserrat"] font-extrabold leading-none;
+  @apply text-5xl lg:text-[84px] font-["Montserrat"] font-extrabold leading-none;
 }
 
 .about-box {
@@ -96,19 +104,23 @@ header {
 }
 
 .heading-section {
-  @apply flex justify-center;
+  @apply mx-12 px-12 py-2;
 }
 
 .heading-section .heading-box {
-  @apply flex flex-col mb-9 space-y-2;
+  @apply flex flex-col mb-5;
 }
 
-.heading-section .heading-box>span {
-  @apply font-light;
+.heading-section .heading-box span {
+  @apply font-light leading-none;
 }
 
-.heading-section .heading-box>h1 {
-  @apply text-7xl;
+.heading-section .heading-box h1 {
+  @apply text-7xl mb-2;
+}
+
+.heading-section .heading-box p {
+  @apply text-xl font-[500];
 }
 
 .menu-btn {
@@ -174,7 +186,7 @@ header {
 }
 
 .info-box>span {
-  @apply font-light;
+  @apply w-fit mb-2 font-light border-b border-[var(--color-on-surface-var)];
 }
 
 .info-box>h3 {
@@ -185,55 +197,59 @@ header {
   @apply py-4 px-10 bg-[var(--color-on-surface)] hover:bg-[var(--color-on-surface-sec)] text-sm text-white uppercase rounded-md shadow-md transition duration-300;
 }
 
-.skill-chart li {
+.skills .skill-box tr {
+  @apply border-t border-b border-[var(--color-on-surface-sec)];
+}
+
+.skills .skill-box th {
+  @apply w-1/2 px-2 text-lg text-left leading-relaxed align-top;
+}
+
+.skills .skill-box .skill-items {
+  @apply flex flex-wrap pl-2 gap-1;
+}
+
+.skills .skill-chart li {
   @apply w-full mb-9 font-[500];
 }
 
-.skill-chart li .chart-border {
-  @apply relative border-2 border-solid border-[var(--color-on-surface-sec)];
+.skills .skill-chart li .chart-border {
+  @apply relative border border-solid border-[var(--color-on-surface-sec)];
 }
 
-.skill-chart li .chart-percentage {
+.skills .skill-chart li .chart-percentage {
   @apply border-b-8 border-solid border-[var(--color-secondary)];
   content: '';
 }
 
-.skill-chart li .chart-percentage.seventy-percent {
+.skills .skill-chart li .chart-percentage.sixtyfive-percent {
   width: 65%; 
 }
 
-.skill-chart li .chart-percentage.seventy-percent {
+.skills .skill-chart li .chart-percentage.seventy-percent {
   width: 70%; 
 }
 
-.skill-chart li .chart-percentage.seventy-five-percent {
-  width: 75%; 
-}
-
-.skill-chart li .chart-percentage.eighty-percent {
+.skills .skill-chart li .chart-percentage.eighty-percent {
   width: 80%; 
 }
 
-.skill-chart li .chart-percentage.ninety-percent {
-  width: 90%; 
+.portfolios .portfolio-box {
+  @apply flex flex-col justify-start w-1/4 mb-5 px-5 space-y-2 ;
 }
 
-.skill-chart li .chart-percentage.ninety-five-percent {
-  width: 95%; 
-}
-
-.portfolio-box {
-  @apply flex flex-col justify-start w-1/4 mb-1 p-5 space-y-2 ;
-}
-
-.portfolio-image {
+.portfolios .portfolio-image {
   @apply w-full aspect-square
 }
 
-.portfolio-image img {
+.portfolios .portfolio-image img {
   @apply w-full h-full object-contain bg-[var(--color-bg)] shadow-md transition duration-200 hover:shadow-sm
 }
 
-footer {
-  @apply border-t border-[var(--color-on-surface)]
+.portfolios .portfolio-caption p {
+  @apply font-[500] tracking-wide;
+}
+
+.portfolios .portfolio-caption span {
+  @apply text-sm;
 }
