@@ -15,7 +15,7 @@ const Portfolios = () => {
           <div className='portfolio-box' data-aos='fade-up'>
             <div className='portfolio-image'>
               <a href='/portfolio/1'>
-                <img src='../../public/images/t_logo.png' alt='#'/>
+                <img src='/images/t_logo.png' alt='#'/>
               </a>
             </div>
             <div className='portfolio-caption'>
@@ -26,7 +26,7 @@ const Portfolios = () => {
           <div className='portfolio-box' data-aos='fade-up' data-aos-delay='100'>
             <div className='portfolio-image'>
               <a href='/portfolio/2'>
-                <img src='../../public/images/t_logo.png' alt='#' />
+                <img src='/images/t_logo.png' alt='#' />
               </a>
             </div>
             <div className='portfolio-caption'>
@@ -37,7 +37,7 @@ const Portfolios = () => {
           <div className='portfolio-box' data-aos='fade-up' data-aos-delay='200'>
             <div className='portfolio-image'>
               <a href='/portfolio/3'>
-                <img src='../../public/images/t_logo.png' alt='#' />
+                <img src='/images/t_logo.png' alt='#' />
               </a>
             </div>
             <div className='portfolio-caption'>
@@ -48,7 +48,7 @@ const Portfolios = () => {
           <div className='portfolio-box' data-aos='fade-up' data-aos-delay='300'>
             <div className='portfolio-image'>
               <a href='/portfolio/4'>
-                <img src='../../public/images/t_logo.png' alt='#' />
+                <img src='/images/t_logo.png' alt='#' />
               </a>
             </div>
             <div className='portfolio-caption'>
@@ -59,7 +59,7 @@ const Portfolios = () => {
           <div className='portfolio-box' data-aos='fade-up' data-aos-delay='400'>
             <div className='portfolio-image'>
               <a href='/portfolio/5'>
-                <img src='../../public/images/t_logo.png' alt='#' />
+                <img src='/images/t_logo.png' alt='#' />
               </a>
             </div>
             <div className='portfolio-caption'>
@@ -70,7 +70,7 @@ const Portfolios = () => {
           <div className='portfolio-box' data-aos='fade-up' data-aos-delay='500'>
             <div className='portfolio-image'>
               <a href='/portfolio/6'>
-                <img src='../../public/images/t_logo.png' alt='#' />
+                <img src='/images/t_logo.png' alt='#' />
               </a>
             </div>
             <div className='portfolio-caption'>
@@ -81,7 +81,7 @@ const Portfolios = () => {
           <div className='portfolio-box' data-aos='fade-up' data-aos-delay='500'>
             <div className='portfolio-image'>
               <a href='/portfolio/6'>
-                <img src='../../public/images/t_logo.png' alt='#' />
+                <img src='/images/t_logo.png' alt='#' />
               </a>
             </div>
             <div className='portfolio-caption'>
@@ -92,7 +92,7 @@ const Portfolios = () => {
           <div className='portfolio-box' data-aos='fade-up' data-aos-delay='500'>
             <div className='portfolio-image'>
               <a href='/portfolio/6'>
-                <img src='../../public/images/t_logo.png' alt='#' />
+                <img src='/images/t_logo.png' alt='#' />
               </a>
             </div>
             <div className='portfolio-caption'>

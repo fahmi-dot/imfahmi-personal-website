@@ -6,7 +6,7 @@ const Hero = () => {
       <div className='content-box banner-box mb-9'>
         <div className='w-4/7'>
           <div className='banner-image' data-aos='fade-right'>
-            <img src="../../public/images/banner_img.png" alt="ImFahmi Banner" />
+            <img src="/images/banner_img.png" alt="ImFahmi Banner" />
           </div>
         </div>
         <div className='w-3/7'>

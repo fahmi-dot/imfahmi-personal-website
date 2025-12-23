@@ -6,7 +6,7 @@ const Navbar = () => {
       <div>
         <div className='my-5 py-5'>
           <a href="#">
-            <img src="../../public/images/t_logo.png" alt="imFahmi" className='w-full'/>
+            <img src="/images/t_logo.png" alt="imFahmi" className='w-full'/>
           </a>
         </div>
         <nav id='one-page-menu'>
