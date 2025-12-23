@@ -23,21 +23,21 @@ const Hero = () => {
           <div className='info-box' data-aos='fade-up'>
             <span>01</span>
             <h3>Mobile Developer</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt dignissimos aut quis, distinctio similique ut doloremque?</p>
+            <p>Develop mobile applications using Flutter and React Native frameworks.</p>
           </div>
         </div> 
         <div className='w-1/4'>
           <div className='info-box' data-aos='fade-up' data-aos-delay='100'>
             <span>02</span>
             <h3>Backend Developer</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt dignissimos aut quis, distinctio similique ut doloremque?</p>
+            <p>Develop web APIs using Spring Boot framework.</p>
           </div>
         </div>
         <div className='w-1/4'>
           <div className='info-box' data-aos='fade-up' data-aos-delay='200'>
             <span>03</span>
             <h3>Web Developer</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt dignissimos aut quis, distinctio similique ut doloremque?</p>
+            <p>Develop websites and web applications using React JS + Tailwind CSS framework.</p>
           </div>
         </div>
         <div className='w-1/4'>

@@ -13,8 +13,8 @@ const Navbar = () => {
           <ul className='list-none'>
             <li className='item-list'><a href="#" className='nav-link'>Home</a></li>
             <li className='item-list'><a href="#about" className='nav-link'>About</a></li>
-            <li className='item-list'><a href="#" className='nav-link'>Skills</a></li>
-            <li className='item-list'><a href="#" className='nav-link'>Portfolios</a></li>
+            <li className='item-list'><a href="#skills" className='nav-link'>Skills</a></li>
+            <li className='item-list'><a href="#portfolios" className='nav-link'>Portfolios</a></li>
           </ul>
         </nav>
       </div>
@@ -27,7 +27,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className='my-5 pt-5 flex justify-center border-t border-gray-200'>
-          <p className='text-sm'>ImFahmi</p>
+          <p className='text-sm'>© ImFahmi</p>
         </div>
       </div>
     </div>
