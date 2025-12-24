@@ -21,8 +21,8 @@ const Navbar = () => {
       <div>
         <div id='social-menu'>
           <ul className='flex flex-wrap justify-start gap-3 list-none'>
-            <li className='item-list'><a href="#">LinkedIn</a></li>
             <li className='item-list'><a href="#">GitHub</a></li>
+            <li className='item-list'><a href="#">LinkedIn</a></li>
             <li className='item-list'><a href="#">Instagram</a></li>
           </ul>
         </div>

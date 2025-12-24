@@ -3,7 +3,7 @@ import React from 'react'
 const Portfolios = () => {
   return (
     <div className='portfolios'>
-      <div className='flex flex-col '>
+      <div className='flex flex-col'>
         <div className='heading-section'>
           <div className='heading-box' data-aos='fade-up'>
             <span>Some of my recent</span>
@@ -11,7 +11,7 @@ const Portfolios = () => {
             <p>Here are some projects I have worked on.</p>
           </div>
         </div>
-        <div className='flex flex-wrap p-2'>
+        <div className='content-box lg:grid-cols-4'>
           <div className='portfolio-box' data-aos='fade-up'>
             <div className='portfolio-image'>
               <a href='/portfolio/1'>

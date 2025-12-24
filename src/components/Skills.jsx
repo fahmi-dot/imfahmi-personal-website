@@ -12,7 +12,7 @@ const Skills = () => {
           </div>
         </div>
         <div className='content-box'>
-          <div className='w-1/2'>
+          <div>
             <table className='skill-box my-4' data-aos='fade-up'>
               <tbody>
                 <tr>
@@ -23,18 +23,17 @@ const Skills = () => {
                       <span>Dart,</span>
                       <span>JavaScript,</span>
                       <span>Kotlin,</span>
-                      <span>Go</span>
+                      <span>Golang</span>
                     </div>
                   </td>
                 </tr>
-              </tbody>
                 <tr>
                   <th><h4>Frameworks</h4></th>
                   <td>
                     <div className='skill-items'>
                       <span>Spring Boot,</span>
-                      <span>Flutter</span>
-                      <span>React JS</span>
+                      <span>Flutter,</span>
+                      <span>React JS,</span>
                       <span>React Native</span>
                     </div>
                   </td>
@@ -44,7 +43,7 @@ const Skills = () => {
                   <td>
                     <div className='skill-items'>
                       <span>MySQL,</span>
-                      <span>PostgreSQL</span>
+                      <span>PostgreSQL,</span>
                       <span>Firebase</span>
                     </div>
                   </td>
@@ -75,15 +74,16 @@ const Skills = () => {
                     <div className='skill-items'>
                       <span>VS Code,</span>
                       <span>Intellij IDEA,</span>
-                      <span>Adobe Photoshop</span>
-                      <span>Adobe Illustrator</span>
+                      <span>Adobe Photoshop,</span>
+                      <span>Adobe Illustrator,</span>
                       <span>Ms. Office</span>
                     </div>
                   </td>
                 </tr>
+              </tbody>
             </table>
           </div>
-          <div className='w-1/2'>
+          <div>
             <div className='skill-chart' data-aos='fade-up' data-aos-delay='100'>
               <ul className='list-none'>
                 <li>

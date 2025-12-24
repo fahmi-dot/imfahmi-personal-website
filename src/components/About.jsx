@@ -12,7 +12,7 @@ const About = () => {
       </div>
       <div className='content-box' data-aos='fade-up'>
         <div className='about-box'>
-          <h2 className='text-5xl'>Education</h2>
+          <h2 className='text-2xl md:text-4xl'>Education</h2>
           <div className='info-box' data-aos='fade-up'>
             <span>2020 - 2024</span>
             <h3>Bachelors of Computer Science</h3>
@@ -21,7 +21,7 @@ const About = () => {
           </div>
         </div>
         <div className='about-box'>
-          <h2 className='text-5xl'>Experience</h2>
+          <h2 className='text-2xl md:text-4xl'>Experience</h2>
           <div className='info-box' data-aos='fade-up' data-aos-delay='200'>
             <span>2023 - 2024</span>
             <h3>Android Developer Intern</h3>
