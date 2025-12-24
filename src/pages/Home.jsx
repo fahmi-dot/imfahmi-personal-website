@@ -1,10 +1,13 @@
 import React from 'react'
 import { About, Footer, Hero, MenuButton, Navbar, Portfolios, Skills } from '../components'
+import { useState } from 'react';
 
 const Home = () => {
+  const [navActive, setNavActive] = useState(false);
+
   return (
-    <div>
-      <MenuButton />
+    <div className={navActive ? 'nav-active' : ''}>
+      <MenuButton navActive={navActive} setNavActive={setNavActive} />
       <div className='flex justify-end'>
         <header>
           <Navbar />

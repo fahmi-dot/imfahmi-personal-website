@@ -2,9 +2,9 @@ import React from 'react'
 
 const Navbar = () => {
   return (
-    <div className='flex flex-wrap flex-col justify-between h-full'>
+    <div className='flex flex-col justify-between h-full'>
       <div>
-        <div className='my-5 py-5'>
+        <div className='my-3 py-3'>
           <a href="#">
             <img src="/images/t_logo.png" alt="imFahmi" className='w-full'/>
           </a>
@@ -26,7 +26,7 @@ const Navbar = () => {
             <li className='item-list'><a href="#">Instagram</a></li>
           </ul>
         </div>
-        <div className='my-5 pt-5 flex justify-center border-t border-gray-200'>
+        <div className='my-5 pt-6 flex justify-center text-sm border-t text-gray-400 border-gray-400 border-opacity-70'>
           <p className='text-sm'>© ImFahmi</p>
         </div>
       </div>

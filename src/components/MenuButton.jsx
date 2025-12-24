@@ -1,16 +1,11 @@
 import React from 'react'
-import { useState } from 'react'
 
-const MenuButton = () => {
-  const [navActive, setNavActive] = useState(false);
-
+const MenuButton = ({ navActive, setNavActive }) => {
   return (
-    <div className={navActive ? 'nav-active' : ''}>
-      <div className='menu-btn' onClick={() => setNavActive(!navActive)}>
-        <span></span>
-      </div>
+    <div className="menu-btn" onClick={() => setNavActive(!navActive)}>
+      <span></span>
     </div>
-  )
-}
+  );
+};
 
 export default MenuButton

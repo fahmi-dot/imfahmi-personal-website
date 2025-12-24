@@ -44,11 +44,11 @@ h6,
 }
 
 #one-page-menu .item-list {
-  @apply relative border-b border-gray-200;
+  @apply relative border-b border-gray-400;
 }
 
 #one-page-menu .nav-link {
-  @apply text-lg font-[400] not-italic leading-[2.5];
+  @apply text-lg font-[500] not-italic leading-[2.5];
   color: var(--color-on-surface);
 }
 
@@ -68,7 +68,7 @@ h6,
 }
 
 header {
-  @apply fixed top-0 left-0 w-1/6 h-full px-12 bg-[var(--color-bg)];
+  @apply fixed top-0 left-0 w-1/6 h-full px-7 md:px-12 bg-[var(--color-bg)];
 }
 
 section {
@@ -96,7 +96,7 @@ section {
 }
 
 .hero .banner-box .banner-content .banner-title {
-  @apply text-5xl md:text-7xl lg:text-[84px] font-["Montserrat"] font-extrabold leading-none;
+  @apply text-4xl md:text-7xl lg:text-[84px] font-["Montserrat"] font-extrabold leading-none;
 }
 
 .about-box {
