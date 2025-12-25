@@ -1,4 +1,6 @@
 import React from 'react'
+import { navs } from '../data/navs';
+import { socials } from '../data/socials';
 
 const Footer = () => {
   return (
@@ -13,18 +15,19 @@ const Footer = () => {
           <div data-aos='fade-up' data-aos-delay='100'>
             <h5 className='text-lg font-semibold uppercase'>Links</h5>
             <ul className='pt-2 md:mt-4 space-y-1 md:space-y-2 text-sm'>
-              <li><a href='#' className='item-link'>Home</a></li>
-              <li><a href='#about' className='item-link'>About</a></li>
-              <li><a href='#skills' className='item-link'>Skills</a></li>
-              <li><a href='#portfolios' className='itemslink'>Portfolios</a></li>
+              {navs.map((item, i) => (
+                <li key={i} data-aos='fade-up' data-aos-delay={i * 100}>
+                  <a href={`#${item.link}`} className='item-link'>{item.nav}</a>
+                </li>
+              ))}
             </ul>
           </div>
           <div data-aos='fade-up' data-aos-delay='200'>
             <h5 className='text-lg font-semibold uppercase'>Socials</h5>
-            <div className='flex pt-2 md:pt-4   space-x-4 text-sm'>
-              <a href='#' className='item-link'>GitHub</a>
-              <a href='#' className='item-link'>LinkedIn</a>
-              <a href='#' className='item-link'>Instagram</a>
+            <div className='flex pt-2 md:pt-4 space-x-4 text-sm'>
+              {socials.map((item, i) => (
+                <a key={i} href={item.link} className='item-link' data-aos='fade-left' data-aos-delay={i * 100}>{item.platform}</a>
+              ))}
             </div>
           </div>
         </div>

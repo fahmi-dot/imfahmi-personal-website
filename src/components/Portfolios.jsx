@@ -1,4 +1,5 @@
 import React from 'react'
+import { portfolios } from '../data/portfolios'
 
 const Portfolios = () => {
   return (
@@ -12,94 +13,19 @@ const Portfolios = () => {
           </div>
         </div>
         <div className='content-box lg:grid-cols-4'>
-          <div className='portfolio-box' data-aos='fade-up'>
-            <div className='portfolio-image'>
-              <a href='/portfolio/1'>
-                <img src='/images/t_logo.png' alt='#'/>
-              </a>
+          {portfolios.map((item, i) => (
+            <div key={i} className='portfolio-box' data-aos='fade-up' data-aos-delay={i * 100}>
+              <div className='portfolio-image'>
+                <a href={`https://github.com/fahmi-dot/${item.link}`}>
+                  <img src={item.image === '' ? '/images/t_logo.png' : `/images/${item.image}`} alt={item.title}/>
+                </a>
+              </div>
+              <div className='portfolio-caption'>
+                <p>{item.title}</p>
+                <span>{item.tools}</span>
+              </div>
             </div>
-            <div className='portfolio-caption'>
-              <p>Weather App</p>
-              <span>Flutter, GetX, SharedPreferences, HTTP</span>
-            </div>
-          </div>
-          <div className='portfolio-box' data-aos='fade-up' data-aos-delay='100'>
-            <div className='portfolio-image'>
-              <a href='/portfolio/2'>
-                <img src='/images/t_logo.png' alt='#' />
-              </a>
-            </div>
-            <div className='portfolio-caption'>
-              <p>Driver App</p>
-              <span>Flutter, Riverpod, SharedPreferences, GPS, Biometric</span>
-            </div>
-          </div>
-          <div className='portfolio-box' data-aos='fade-up' data-aos-delay='200'>
-            <div className='portfolio-image'>
-              <a href='/portfolio/3'>
-                <img src='/images/t_logo.png' alt='#' />
-              </a>
-            </div>
-            <div className='portfolio-caption'>
-              <p>Chat App</p>
-              <span>Flutter, Riverpod, SharedPreferences, Hive, Sqflite</span>
-            </div>
-          </div>
-          <div className='portfolio-box' data-aos='fade-up' data-aos-delay='300'>
-            <div className='portfolio-image'>
-              <a href='/portfolio/4'>
-                <img src='/images/t_logo.png' alt='#' />
-              </a>
-            </div>
-            <div className='portfolio-caption'>
-              <p>Chat App API</p>
-              <span>Spring Boot, JWT, WebSocket</span>
-            </div>
-          </div>
-          <div className='portfolio-box' data-aos='fade-up' data-aos-delay='400'>
-            <div className='portfolio-image'>
-              <a href='/portfolio/5'>
-                <img src='/images/t_logo.png' alt='#' />
-              </a>
-            </div>
-            <div className='portfolio-caption'>
-              <p>Personal Store Web App</p>
-              <span>React JS, Redux, Tailwind CSS</span>
-            </div>
-          </div>
-          <div className='portfolio-box' data-aos='fade-up' data-aos-delay='500'>
-            <div className='portfolio-image'>
-              <a href='/portfolio/6'>
-                <img src='/images/t_logo.png' alt='#' />
-              </a>
-            </div>
-            <div className='portfolio-caption'>
-              <p>Personal Store API</p>
-              <span>Spring Boot, JWT</span>
-            </div>
-          </div>
-          <div className='portfolio-box' data-aos='fade-up' data-aos-delay='500'>
-            <div className='portfolio-image'>
-              <a href='/portfolio/6'>
-                <img src='/images/t_logo.png' alt='#' />
-              </a>
-            </div>
-            <div className='portfolio-caption'>
-              <p>ToDo List App</p>
-              <span>Flutter, Riverpod, SharedPreferences</span>
-            </div>
-          </div>
-          <div className='portfolio-box' data-aos='fade-up' data-aos-delay='500'>
-            <div className='portfolio-image'>
-              <a href='/portfolio/6'>
-                <img src='/images/t_logo.png' alt='#' />
-              </a>
-            </div>
-            <div className='portfolio-caption'>
-              <p>Rebike API</p>
-              <span>Spring Boot, JWT, WebSocket</span>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>

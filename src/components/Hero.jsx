@@ -1,4 +1,5 @@
 import React from 'react'
+import { hero } from '../data/hero'
 
 const Hero = () => {
   return (
@@ -10,36 +11,22 @@ const Hero = () => {
           </div>
         </div>
         <div className='w-1/2 lg:w-3/7'>
-          <div className='banner-content' data-aos='fade-in'>
-            <div className='banner-tag'>
+          <div className='banner-content'>
+            <div className='banner-tag' data-aos='fade-left'>
               <span>Fullstack Developer</span>
             </div>
-            <h1 className='banner-title'>Agil Fahmi Raka Saputra</h1>
+            <h1 className='banner-title' data-aos='fade-in'>Agil Fahmi Raka Saputra</h1>
           </div>
         </div>
       </div>
       <div className='content-box lg:grid-cols-4'>
-        <div>
-          <div className='info-box' data-aos='fade-up'>
-            <span>01</span>
-            <h3>Mobile Developer</h3>
-            <p>Develop mobile applications using Flutter and React Native frameworks.</p>
+        {hero.map((item, i) => (
+          <div key={i} className='info-box' data-aos='fade-up' data-aos-delay={i * 100}>
+            <span>{item.number}</span>
+            <h3>{item.title}</h3>
+            <p>{item.desc}</p>
           </div>
-        </div> 
-        <div>
-          <div className='info-box' data-aos='fade-up' data-aos-delay='100'>
-            <span>02</span>
-            <h3>Backend Developer</h3>
-            <p>Develop web APIs using Spring Boot framework.</p>
-          </div>
-        </div>
-        <div>
-          <div className='info-box' data-aos='fade-up' data-aos-delay='200'>
-            <span>03</span>
-            <h3>Web Developer</h3>
-            <p>Develop websites and web applications using React JS + Tailwind CSS framework.</p>
-          </div>
-        </div>
+        ))}
         <div>
           <div className='info-btn' data-aos='fade-up' data-aos-delay='300'>
             <a href="#skills" className='btn'>See more</a>

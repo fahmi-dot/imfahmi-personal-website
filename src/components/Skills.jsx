@@ -1,4 +1,5 @@
 import React from 'react'
+import { skills, skillLevels } from '../data/skills'
 
 const Skills = () => {
   return (
@@ -15,113 +16,35 @@ const Skills = () => {
           <div>
             <table className='skill-box my-4' data-aos='fade-up'>
               <tbody>
-                <tr>
-                  <th><h4>Programming Languages</h4></th>
-                  <td>
-                    <div className='skill-items'>
-                      <span>Java,</span>
-                      <span>Dart,</span>
-                      <span>JavaScript,</span>
-                      <span>Kotlin,</span>
-                      <span>Golang</span>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th><h4>Frameworks</h4></th>
-                  <td>
-                    <div className='skill-items'>
-                      <span>Spring Boot,</span>
-                      <span>Flutter,</span>
-                      <span>React JS,</span>
-                      <span>React Native</span>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th><h4>Databases</h4></th>
-                  <td>
-                    <div className='skill-items'>
-                      <span>MySQL,</span>
-                      <span>PostgreSQL,</span>
-                      <span>Firebase</span>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th><h4>Version Controls</h4></th>
-                  <td>
-                    <div className='skill-items'>
-                      <span>Git,</span>
-                      <span>GitHub,</span>
-                      <span>GitLab</span>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th><h4>CI/CD's</h4></th>
-                  <td>
-                    <div className='skill-items'>
-                      <span>Docker,</span>
-                      <span>Jenkins,</span>
-                      <span>GitHub Action</span>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th><h4>Others</h4></th>
-                  <td>
-                    <div className='skill-items'>
-                      <span>VS Code,</span>
-                      <span>Intellij IDEA,</span>
-                      <span>Adobe Photoshop,</span>
-                      <span>Adobe Illustrator,</span>
-                      <span>Ms. Office</span>
-                    </div>
-                  </td>
-                </tr>
+                {skills.map((item, i) => (
+                  <tr key={i}>
+                    <th><h4 data-aos='fade-in' data-aos-delay={i * 100}>{item.title}</h4></th>
+                    <td>
+                      <div className='skill-items'>
+                        {item.values.map((sub, j) => (
+                          <span key={j} data-aos='fade-left' data-aos-delay={j * 100}>{sub.valueName},</span>
+                        ))}
+                      </div>
+                    </td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
           <div>
             <div className='skill-chart' data-aos='fade-up' data-aos-delay='100'>
               <ul className='list-none'>
-                <li>
-                  <div className='flex justify-between'>
-                    <span>Mobile Developer</span>
-                    <span>80%</span>
-                  </div>
-                  <div className="chart-border">
-                    <div className='chart-percentage eighty-percent'></div>
-                  </div>
-                </li>
-                <li>
-                  <div className='flex justify-between'>
-                    <span>Backend Developer</span>
-                    <span>85%</span>
-                  </div>
-                  <div className="chart-border">
-                    <div className='chart-percentage eighty-percent'></div>
-                  </div>
-                </li>
-                <li>
-                  <div className='flex justify-between'>
-                    <span>Web Developer</span>
-                    <span>70%</span>
-                  </div>
-                  <div className="chart-border">
-                    <div className='chart-percentage seventy-percent'></div>
-                  </div>
-                </li>
-                <li>
-                  <div className='flex justify-between'>
-                    <span>Design</span>
-                    <span>65%</span>
-                  </div>
-                  <div className="chart-border">
-                    <div className='chart-percentage sixtyfive-percent'></div>
-                  </div>
-                </li>
+                {skillLevels.map((item, i) => (
+                  <li key={i} data-aos='fade-up' data-aos-delay={i * 100}>
+                    <div className='flex justify-between'>
+                      <span>{item.title}</span>
+                      <span>{item.value}%</span>
+                    </div>
+                    <div className="chart-border">
+                      <div className={`chart-percentage ${item.valueText}`}></div>
+                    </div>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>

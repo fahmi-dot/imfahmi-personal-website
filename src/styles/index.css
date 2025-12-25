@@ -47,7 +47,7 @@ h6,
 }
 
 #one-page-menu .item-list {
-  @apply relative border-b border-gray-400;
+  @apply relative border-b border-gray-300;
 }
 
 #one-page-menu .nav-link {

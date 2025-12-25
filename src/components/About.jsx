@@ -1,4 +1,5 @@
 import React from 'react'
+import { about } from '../data/about'
 
 const About = () => {
   return (
@@ -11,30 +12,19 @@ const About = () => {
         </div>
       </div>
       <div className='content-box'>
-        <div className='about-box'>
-          <h2 className='text-2xl md:text-4xl' data-aos='fade-up'>Education</h2>
-          <div className='info-box' data-aos='fade-up' data-aos-delay='100'>
-            <span>2020 - 2024</span>
-            <h3>Bachelors of Computer Science</h3>
-            <p>GPA 3.68/4.00</p>
-            <p className='uppercase font-[500]'>Yogyakarta University of Technology</p>
+        {about.map((item, i) => (
+          <div key={i} className='about-box'>
+            <h2 className='text-2xl md:text-4xl' data-aos='fade-up' data-aos-delay={i * 100}>{item.heading}</h2>
+            {item.value.map((sub, j) => (
+              <div key={j} className='info-box' data-aos='fade-up' data-aos-delay={i * 100}>
+                <span>{sub.year}</span>
+                <h3>{sub.title}</h3>
+                <p>{sub.desc}</p>
+                <p className='uppercase font-[500]'>{sub.company}</p>
+              </div>
+            ))}
           </div>
-        </div>
-        <div className='about-box'>
-          <h2 className='text-2xl md:text-4xl' data-aos='fade-up' data-aos-delay='200'>Experience</h2>
-          <div className='info-box' data-aos='fade-up' data-aos-delay='300'>
-            <span>2023 - 2024</span>
-            <h3>Android Developer Intern</h3>
-            <p>Develop an goods data management application</p>
-            <p className='uppercase font-[500]'>Elektro Jogja</p>
-          </div>
-          <div className='info-box' data-aos='fade-up' data-aos-delay='400'>
-            <span>2022 - 2023</span>
-            <h3>Assistant Lecturer of Object-Oriented Programming Course</h3>
-            <p>OOP - Java Programming Language</p>
-            <p className='uppercase font-[500]'>Yogyakarta University of Technology</p>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   )

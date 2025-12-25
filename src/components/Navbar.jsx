@@ -1,4 +1,6 @@
 import React from 'react'
+import { navs } from '../data/navs'
+import { socials } from '../data/socials'
 
 const Navbar = ({ activeSection }) => {
   return (
@@ -11,35 +13,22 @@ const Navbar = ({ activeSection }) => {
         </div>
         <nav id='one-page-menu'>
           <ul className='list-none'>
-            <li className='item-list'>
-              <a href="#hero"className={`nav-link ${activeSection === 'hero' ? 'active' : ''}`}>
-                Home
-              </a>
-            </li>
-            <li className='item-list'>
-              <a href="#about"className={`nav-link ${activeSection === 'about' ? 'active' : ''}`}>
-                About
-              </a>
-            </li>
-            <li className='item-list'>
-              <a href="#skills"className={`nav-link ${activeSection === 'skills' ? 'active' : ''}`}>
-                Skills
-              </a>
-            </li>
-            <li className='item-list'>
-              <a href="#portfolios"className={`nav-link ${activeSection === 'portfolios' ? 'active' : ''}`}>
-                Portfolios
-              </a>
-            </li>
+            {navs.map((item, i) => (
+              <li key={i} className='item-list' data-aos='fade-right' data-aos-delay={i * 100}>
+                <a href={`#${item.link}`} className={`nav-link ${activeSection === item.link ? 'active' : ''}`}>
+                  {item.nav}
+                </a>
+              </li>
+            ))}
           </ul>
         </nav>
       </div>
       <div>
         <div id='social-menu'>
           <ul className='flex flex-wrap justify-start gap-3 list-none'>
-            <li className='item-list'><a href="#">GitHub</a></li>
-            <li className='item-list'><a href="#">LinkedIn</a></li>
-            <li className='item-list'><a href="#">Instagram</a></li>
+            {socials.map((item, i) => (
+              <li key={i} className='item-list text-sm'><a href={item.link}>{item.platform}</a></li>
+            ))}
           </ul>
         </div>
         <div className='my-5 pt-6 flex justify-center text-sm border-t text-gray-400 border-gray-400 border-opacity-70'>
