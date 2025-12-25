@@ -1,16 +1,40 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { About, Footer, Hero, MenuButton, Navbar, Portfolios, Skills } from '../components'
-import { useState } from 'react';
 
 const Home = () => {
   const [navActive, setNavActive] = useState(false);
+  const [activeSection, setActiveSection] = useState('hero');
+
+  useEffect(() => {
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: "-40% 0px -40% 0px",
+        threshold: 0
+      }
+    );
+
+    sections.forEach(section => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, []);
+
 
   return (
     <div className={navActive ? 'nav-active' : ''}>
       <MenuButton navActive={navActive} setNavActive={setNavActive} />
+
       <div className='flex justify-end'>
         <header>
-          <Navbar />
+          <Navbar activeSection={activeSection} />
         </header>
         <main className='w-full lg:w-5/6'>
           <div className='container-box'>

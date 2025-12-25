@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Navbar = () => {
+const Navbar = ({ activeSection }) => {
   return (
     <div className='flex flex-col justify-between h-full'>
       <div>
@@ -11,10 +11,26 @@ const Navbar = () => {
         </div>
         <nav id='one-page-menu'>
           <ul className='list-none'>
-            <li className='item-list'><a href="#" className='nav-link'>Home</a></li>
-            <li className='item-list'><a href="#about" className='nav-link'>About</a></li>
-            <li className='item-list'><a href="#skills" className='nav-link'>Skills</a></li>
-            <li className='item-list'><a href="#portfolios" className='nav-link'>Portfolios</a></li>
+            <li className='item-list'>
+              <a href="#hero"className={`nav-link ${activeSection === 'hero' ? 'active' : ''}`}>
+                Home
+              </a>
+            </li>
+            <li className='item-list'>
+              <a href="#about"className={`nav-link ${activeSection === 'about' ? 'active' : ''}`}>
+                About
+              </a>
+            </li>
+            <li className='item-list'>
+              <a href="#skills"className={`nav-link ${activeSection === 'skills' ? 'active' : ''}`}>
+                Skills
+              </a>
+            </li>
+            <li className='item-list'>
+              <a href="#portfolios"className={`nav-link ${activeSection === 'portfolios' ? 'active' : ''}`}>
+                Portfolios
+              </a>
+            </li>
           </ul>
         </nav>
       </div>
