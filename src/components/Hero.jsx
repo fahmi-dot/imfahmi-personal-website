@@ -41,7 +41,7 @@ const Hero = () => {
           </div>
         </div>
         <div>
-          <div className='info-btn'>
+          <div className='info-btn' data-aos='fade-up' data-aos-delay='300'>
             <a href="#skills" className='btn'>See more</a>
           </div>
         </div>
